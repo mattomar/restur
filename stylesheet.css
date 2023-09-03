@@ -45,8 +45,13 @@ ul,
 li {
     display: flex;
     gap: 40px;
+    cursor: pointer;
 }
 
+ul :hover{
+    color: black;
+    font-weight: bold;
+}
 
 .restaurant-image-container {
     background-size: cover;
@@ -98,3 +103,4 @@ li {
     height: 35px;
     margin-top: 40px;
 }
+
