@@ -1,6 +1,6 @@
 export function createRestaurantPage() {
     document.addEventListener('DOMContentLoaded', () => {
-        const contentDiv = document.getElementById('content');
+        const contentDiv = document.getElementById('homeContent');
 
         
 
