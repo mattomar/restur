@@ -1,40 +1,40 @@
 import { createRestaurantPage } from './home';
 import { createWhyPage } from './why';
-
+import { createMenuPage } from './menu';
 
 createRestaurantPage();
 createWhyPage();
+createMenuPage();
 
 
 
 
+function showContent(tabId) {
+    const contentSections = ['homeContent', 'whyContent', 'menuContent'];
 
-
-function showHomeContent() {
-    const homeContent = document.getElementById('homeContent');
-    const whyContent = document.getElementById('whyContent');
-
-    homeContent.style.display = 'block'; // Show home content
-    whyContent.style.display = 'none';   // Hide why content
-}
-
-// Function to show the why content
-function showWhyContent() {
-    const homeContent = document.getElementById('homeContent');
-    const whyContent = document.getElementById('whyContent');
-
-    homeContent.style.display = 'none';   
-    whyContent.style.display = 'block';  
+    contentSections.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        section.style.display = sectionId === tabId ? 'block' : 'none';
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const homeTab = document.querySelector('li[data-type-target="#homeContent"]');
-    const whyTab = document.querySelector('li[data-type-target="#whyContent"]');
+    const tabLinks = document.querySelectorAll('li[data-type-target]');
 
-    // Initially, show the home content and hide the why content
-    showHomeContent();
+    // Initially, show the home content and hide the other sections
+    showContent('homeContent');
 
     // Add click event listeners to the tabs
-    homeTab.addEventListener('click', showHomeContent);
-    whyTab.addEventListener('click', showWhyContent);
+    tabLinks.forEach(tabLink => {
+        tabLink.addEventListener('click', () => {
+            const tabId = tabLink.getAttribute('data-type-target').substring(1); // Remove the '#' symbol
+            showContent(tabId);
+        });
+    });
 });
+
+
+
+
+
+
