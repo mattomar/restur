@@ -1,16 +1,18 @@
 import { createRestaurantPage } from './home';
 import { createWhyPage } from './why';
 import { createMenuPage } from './menu';
+import { createLocationPage } from './location';
 
 createRestaurantPage();
 createWhyPage();
 createMenuPage();
+createLocationPage();
 
 
 
 
 function showContent(tabId) {
-    const contentSections = ['homeContent', 'whyContent', 'menuContent'];
+    const contentSections = ['homeContent', 'whyContent', 'menuContent', 'locationContent'];
 
     contentSections.forEach(sectionId => {
         const section = document.getElementById(sectionId);
