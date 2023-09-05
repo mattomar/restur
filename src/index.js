@@ -11,6 +11,7 @@ createLocationPage();
 
 
 
+
 function showContent(tabId) {
     const contentSections = ['homeContent', 'whyContent', 'menuContent', 'locationContent'];
 

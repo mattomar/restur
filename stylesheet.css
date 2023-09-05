@@ -178,3 +178,27 @@ li:hover {
     font-size: 18px;
     color: #333;
 }
+
+
+.location-title{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-top: 30px;
+    margin-bottom: 50px;
+}
+
+
+.location-info{
+    color: var(--font-color);
+    font-size: 1rem;
+    background-color: rgb(240, 239, 239);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+}
