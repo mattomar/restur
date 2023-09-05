@@ -1,12 +1,10 @@
 export function createWhyPage() {
     const parentElement = document.getElementById('whyContent');
 
-    // Create a <div> element with class "title"
     const titleDiv = document.createElement('div');
     titleDiv.classList.add('title');
     titleDiv.textContent = 'Why To Choose Us';
     
-    // Create a <div> element with class "paragraph"
     const paragraphDiv = document.createElement('div');
     paragraphDiv.classList.add('paragraph');
     paragraphDiv.innerHTML = `
@@ -19,7 +17,6 @@ export function createWhyPage() {
         your dining moments."
     `;
     
-    // Append the created elements to the parent element
     parentElement.appendChild(titleDiv);
     parentElement.appendChild(paragraphDiv);
     
